@@ -63,3 +63,5 @@ class Zombie:
             print('hit')
             if self.count==2:
                 game_world.remove_object(self)  
+        if group=='boy:zombie':
+            pass
