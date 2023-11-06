@@ -3,8 +3,6 @@ import math
 import game_framework
 import game_world
 from pico2d import *
-import os
-os.chdir(os.path.dirname(__file__))
 # zombie Run Speed
 PIXEL_PER_METER = (10.0 / 0.3)  # 10 pixel 30 cm
 RUN_SPEED_KMPH = 10.0  # Km / Hour

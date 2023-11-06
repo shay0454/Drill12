@@ -24,7 +24,7 @@ def render():
 def remove_collsion_object(o):
     for pairs in collision_pairs.values():
         if o in pairs[0]:
-            pairs[0].remove(0)
+            pairs[0].remove(o)
         if o in pairs[1]:
             pairs[1].remove(o)
     pass
