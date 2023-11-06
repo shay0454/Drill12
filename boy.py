@@ -100,6 +100,7 @@ class Run:
     @staticmethod
     def exit(boy, e):
         if space_down(e):
+            print('fire')
             boy.fire_ball()
 
         pass
@@ -209,6 +210,7 @@ class Boy:
         self.state_machine.draw()
         self.font.draw(self.x-10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
         draw_rectangle(*self.get_bb())
+        print(self.ball_count)
 
     # fill here
     def get_bb(self):
@@ -217,3 +219,5 @@ class Boy:
     def handle_collsion(self,group,other):
         if group=='boy:ball':
             self.ball_count += 1
+        if group=='boy:zombie':
+            game_framework.quit()
