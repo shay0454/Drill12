@@ -27,3 +27,5 @@ class Ball:
     def handle_collsion(self,group,other):
         if group=='boy:ball':
             game_world.remove_object(self)
+        if group=='ball:zombie':
+            game_world.remove_object(self)
