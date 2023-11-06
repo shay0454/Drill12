@@ -55,13 +55,10 @@ class Zombie:
         pass
 
     def get_bb(self):
-        return self.x-100,self.y-100,self.x+100,self.y+100
+        return self.x-70,self.y-100,self.x+70,self.y+100
     
     def handle_collsion(self,group,other):
         if group=='ball:zombie':
             self.count+=1
-            print('hit')
             if self.count==2:
                 game_world.remove_object(self)  
-        if group=='boy:zombie':
-            pass
